@@ -7,5 +7,6 @@ public class Main {
         company.hire(new Manager(350));
         company.hire(new TopManager(500));
         company.hire(new TopManager(550));
+
     }
 }

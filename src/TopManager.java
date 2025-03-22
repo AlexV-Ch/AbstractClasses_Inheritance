@@ -7,6 +7,12 @@ public class TopManager implements Employee {
 
     @Override
     public double getMonthSalary() {
-        return salaryTopManager;
+        if (Company.income > 10_000_000) {
+            return salaryTopManager * 1.5;
+        } else {
+            return salaryTopManager;
+        }
     }
+
+
 }
