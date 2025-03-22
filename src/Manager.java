@@ -10,6 +10,6 @@ public class Manager implements Employee {
     @Override
     public double getMonthSalary() {
         double income = (Math.random() * ((maxValue - minValue) + 1)) + minValue;
-        return salaryManager + (income * 0.05);
+        return Math.round((salaryManager + (income * 0.05)) * 100) / 100;
     }
 }

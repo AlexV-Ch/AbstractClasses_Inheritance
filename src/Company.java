@@ -10,6 +10,17 @@ public class Company {
         staff = new ArrayList<>();
         income = 0;
     }
+    public double getIncome() {
+        return income;
+    }
+
+    public void setIncome(double income) {
+        this.income = income;
+    }
+
+    public ArrayList<Employee> getStaff() {
+        return staff;
+    }
 
     public void hire(Employee employee) {
         staff.add(employee);
@@ -23,6 +34,12 @@ public class Company {
         // Удаление ????
     }
 
+    // Печать месячной зарплаты для просто проверки
+    public void getMonth(ArrayList<Employee> employees) {
+        for (Employee employee : employees) {
+            System.out.println(employee.getMonthSalary());
+        }
+    }
 
 
     public ArrayList<Employee> getTopSalaryStaff(int count) {
@@ -35,12 +52,6 @@ public class Company {
         return null;
     }
 
-    public double getIncome() {
-        return income;
-    }
 
-    public void setIncome(double income) {
-        this.income = income;
-    }
 
 }
