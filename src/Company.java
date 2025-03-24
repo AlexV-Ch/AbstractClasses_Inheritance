@@ -38,6 +38,7 @@ public class Company {
     public void getMonth(ArrayList<Employee> employees) {
         for (Employee employee : employees) {
             System.out.println(employee.getMonthSalary());
+            employee.setSalaryMonth(employee.getMonthSalary());
         }
     }
 
