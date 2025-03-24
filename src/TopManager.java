@@ -1,8 +1,12 @@
 public class TopManager implements Employee {
+    private String name;
     private double salaryTopManager;
+    private double salaryMonth;;
 
-    public TopManager(double salaryTopManager) {
+    public TopManager(String name, double salaryTopManager) {
+        this.name = name;
         this.salaryTopManager = salaryTopManager;
+        this.salaryMonth = 0;
     }
 
     @Override
@@ -14,5 +18,11 @@ public class TopManager implements Employee {
         }
     }
 
+    public double getSalaryMonth() {
+        return salaryMonth;
+    }
 
+    public void setSalaryMonth(double salaryMonth) {
+        this.salaryMonth = salaryMonth;
+    }
 }

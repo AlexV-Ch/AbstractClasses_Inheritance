@@ -43,6 +43,15 @@ public class Company {
 
 
     public ArrayList<Employee> getTopSalaryStaff(int count) {
+        ArrayList<Employee> monthSalary = new ArrayList<>();
+        monthSalary.addAll(getStaff());
+        for (Employee employee : getStaff()) {
+            System.out.println(employee);
+        }
+        System.out.println();
+        for (Employee employee : monthSalary) {
+            System.out.println(employee);
+        }
 
         return null;
     }
