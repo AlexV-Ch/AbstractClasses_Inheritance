@@ -21,4 +21,13 @@ public class Operator implements Employee {
     public void setSalaryMonth(double salaryMonth) {
         this.salaryMonth = salaryMonth;
     }
+
+    @Override
+    public String toString() {
+        return "Operator{" +
+                "name='" + name + '\'' +
+                ", salaryOperator=" + salaryOperator +
+                ", salaryMonth=" + salaryMonth +
+                '}';
+    }
 }

@@ -25,4 +25,13 @@ public class TopManager implements Employee {
     public void setSalaryMonth(double salaryMonth) {
         this.salaryMonth = salaryMonth;
     }
+
+    @Override
+    public String toString() {
+        return "TopManager{" +
+                "name='" + name + '\'' +
+                ", salaryTopManager=" + salaryTopManager +
+                ", salaryMonth=" + salaryMonth +
+                '}';
+    }
 }

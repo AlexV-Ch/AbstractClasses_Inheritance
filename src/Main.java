@@ -11,8 +11,14 @@ public class Main {
 
 
 
+
+        company.hireAll(company.addOperator(180));
+        company.hireAll(company.addManager(80));
+        company.hireAll(company.addTopManager(10));
         company.getMonth(company.getStaff());
-        company.getTopSalaryStaff(3);
+
+
+        company.getPrint(company.getStaff());
 
 
 
