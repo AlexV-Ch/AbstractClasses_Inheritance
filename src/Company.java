@@ -35,8 +35,18 @@ public class Company {
     }
 
     // Удаление 50% сотрудников
-    public void fire(Employee employee) {
-        Iterator<Employee> iterator = employee.iterator();
+    public void fire() {
+        Iterator<Employee> iterator = getStaff().iterator();
+        int i = 0;
+        while (iterator.hasNext()) {
+            iterator.next();
+            if (i == 0) {
+               iterator.remove();
+               i = 1;
+            } else {
+                i = 0;
+            }
+        }
 
     }  // Удаление
 

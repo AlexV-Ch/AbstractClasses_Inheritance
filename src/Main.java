@@ -16,7 +16,9 @@ public class Main {
         company.hireAll(company.addManager(80));
         company.hireAll(company.addTopManager(10));
         company.getMonth(company.getStaff());
-
+        System.out.println();
+        company.fire();
+        System.out.println();
 
         company.getPrint(company.getStaff());
 
