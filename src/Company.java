@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class Company {
@@ -28,20 +29,21 @@ public class Company {
         staff.add(employee);
     }
 
+    // найм сотрудников по списку
     public void hireAll(ArrayList<Employee> employes) {
         staff.addAll(employes);
     }
 
+    // Удаление 50% сотрудников
     public void fire(Employee employee) {
-        // Удаление ????
-    }
+        Iterator<Employee> iterator = employee.iterator();
+
+    }  // Удаление
 
     // Начисление месячной зарплаты
     public void getMonth(ArrayList<Employee> employees) {
         for (Employee employee : employees) {
-            //System.out.println(employee.getSalaryMonth());
             employee.setSalaryMonth(employee.getMonthSalary());
-            //System.out.println(employee.getSalaryMonth());
         }
     }
 
@@ -49,7 +51,6 @@ public class Company {
     public void getPrint(ArrayList<Employee> employees) {
         for (Employee employee : employees) {
             System.out.println(employee);
-
         }
     }
 
