@@ -5,9 +5,10 @@ public class Main {
         company.hire(new Operator("Operator1", 100));
         company.hire(new Operator("Operator2", 100));
         company.hire(new Manager("Manager1",300));
-        company.hire(new Manager("Manager2",300));
+        company.hire(new Manager("Manager2",30000));
         company.hire(new TopManager("TopManager1",7500));
         company.hire(new TopManager("TopManager2",8550));
+
 
 
 
@@ -19,7 +20,7 @@ public class Main {
         System.out.println();
         company.fire();
         System.out.println();
-
+        company.getTopSalaryStaff(5);
         company.getPrint(company.getStaff());
 
 

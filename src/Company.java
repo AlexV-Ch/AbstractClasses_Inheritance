@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 
@@ -34,7 +35,7 @@ public class Company {
         staff.addAll(employes);
     }
 
-    // Удаление 50% сотрудников
+    // Удаление 50% сотрудников через одного
     public void fire() {
         Iterator<Employee> iterator = getStaff().iterator();
         int i = 0;
@@ -47,7 +48,6 @@ public class Company {
                 i = 0;
             }
         }
-
     }  // Удаление
 
     // Начисление месячной зарплаты
@@ -66,7 +66,8 @@ public class Company {
 
 
     public ArrayList<Employee> getTopSalaryStaff(int count) {
-
+        Collections.sort(getStaff(), new EmployeeComparator());
+       // System.out.println(getStaff());
         return null;
     }
 
