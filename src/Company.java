@@ -64,7 +64,7 @@ public class Company {
         }
     }
 
-
+    // Список сотрудников с высокой ЗП
     public ArrayList<Employee> getTopSalaryStaff(int count) {
         Collections.sort(getStaff(), new EmployeeComparator());
         Collections.reverse(getStaff());
@@ -74,7 +74,7 @@ public class Company {
         }
         return lowestSalaryStaff;
     }
-
+// Список сотрудников с низкой ЗП
     public ArrayList<Employee> getLowestSalaryStaff(int count) {
         Collections.sort(getStaff(), new EmployeeComparator());
         ArrayList<Employee> lowestSalaryStaff = new ArrayList<>();
