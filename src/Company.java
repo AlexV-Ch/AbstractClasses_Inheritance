@@ -66,16 +66,22 @@ public class Company {
 
 
     public ArrayList<Employee> getTopSalaryStaff(int count) {
-
-
-        return null;
+        Collections.sort(getStaff(), new EmployeeComparator());
+        Collections.reverse(getStaff());
+        ArrayList<Employee> lowestSalaryStaff = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            lowestSalaryStaff.add(getStaff().get(i));
+        }
+        return lowestSalaryStaff;
     }
 
     public ArrayList<Employee> getLowestSalaryStaff(int count) {
         Collections.sort(getStaff(), new EmployeeComparator());
-
-
-        return null;
+        ArrayList<Employee> lowestSalaryStaff = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            lowestSalaryStaff.add(getStaff().get(i));
+        }
+        return lowestSalaryStaff;
     }
 
 

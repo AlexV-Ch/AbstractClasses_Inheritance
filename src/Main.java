@@ -23,7 +23,10 @@ public class Main {
         System.out.println();
         company.fire();
         System.out.println();
-        company.getTopSalaryStaff(5);
+        company.getPrint(company.getTopSalaryStaff(5));
+        System.out.println();
+        company.getPrint(company.getLowestSalaryStaff(5));
+        System.out.println();
         company.getPrint(company.getStaff());
 
 
