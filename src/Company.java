@@ -66,43 +66,39 @@ public class Company {
 
 
     public ArrayList<Employee> getTopSalaryStaff(int count) {
-        Collections.sort(getStaff(), new EmployeeComparator());
-       // System.out.println(getStaff());
+
+
         return null;
     }
 
     public ArrayList<Employee> getLowestSalaryStaff(int count) {
+        Collections.sort(getStaff(), new EmployeeComparator());
+
 
         return null;
     }
 
-    // Создание списка Операторов для приема на работу
-    public ArrayList<Employee> addOperator(int number) {
-        ArrayList<Employee> newOperator = new ArrayList<>();
-        for (int i = 0; i < number; i++) {
-            newOperator.add(new Operator("Operator_" + i, 150));
+
+// // Создание списка для приема на работу tip 1- ТопМенеджеров, 2-Менеджеров, 3-Операторов
+    public ArrayList<Employee> addEmployees(int tip, int number) {
+        ArrayList<Employee> newEmployees = new ArrayList<>();
+        if (tip == 1) {
+            for (int i = 0; i < number; i++) {
+                newEmployees.add(new TopManager("TopManager_" + i, 9550));
+            }
+        } else if (tip == 2) {
+            for (int i = 0; i < number; i++) {
+                newEmployees.add(new Manager("Manager_" + i, 550));
+            }
+        } else if (tip == 3) {
+            for (int i = 0; i < number; i++) {
+                newEmployees.add(new Manager("Manager_" + i, 550));
+            }
+        } else {
+            System.out.println("Такого типа " + tip +" сотрудников нет");
         }
-        return newOperator;
+        return newEmployees;
     }
 
-    // Создание списка Менеджеров для приема на работу
-    public ArrayList<Employee> addManager(int number) {
-        ArrayList<Employee> newManager = new ArrayList<>();
-        for (int i = 0; i < number; i++) {
-            newManager.add(new Manager("Manager_" + i, 550));
 
-        }
-        return newManager;
-    }
-
-    // Создание списка ТопМенеджеров для приема на работу
-    public ArrayList<Employee> addTopManager(int number) {
-        ArrayList<Employee> newTopManager = new ArrayList<>();
-        for (int i = 0; i < number; i++) {
-            newTopManager.add(new TopManager("TopManager_" + i, 9550));
-
-        }
-        return newTopManager;
-
-    }
 }
